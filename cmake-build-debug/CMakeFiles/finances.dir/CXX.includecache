@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/supersu/projects/finances/src/CreditCard.h
+Registry.h
+/Users/supersu/projects/finances/src/Registry.h
+vector
+-
+fstream
+-
+sstream
+-
+exception
+-
+
+/Users/supersu/projects/finances/src/Registry.h
+iostream
+-
+string
+-
+
+/Users/supersu/projects/finances/src/Statistics.cpp
+Statistics.h
+/Users/supersu/projects/finances/src/Statistics.h
+
+/Users/supersu/projects/finances/src/Statistics.h
+CreditCard.h
+/Users/supersu/projects/finances/src/CreditCard.h
+map
+-
+list
+-
+

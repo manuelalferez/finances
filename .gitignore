@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+categories/*
+!categories/.gitkeep
+data/*
+!data/.gitkeep
+formatted_data/*
+!formatted_data/.gitkeep
+statistics/*
+!statistics/.gitkeep

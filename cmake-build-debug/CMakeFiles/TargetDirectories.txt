@@ -1,0 +1,3 @@
+/Users/supersu/projects/finances/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/supersu/projects/finances/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/supersu/projects/finances/cmake-build-debug/CMakeFiles/finances.dir
