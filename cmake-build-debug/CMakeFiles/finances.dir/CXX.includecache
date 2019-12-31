@@ -18,15 +18,21 @@ sstream
 exception
 -
 
+/Users/supersu/projects/finances/src/FileFormatter.h
+string
+-
+sstream
+-
+fstream
+-
+vector
+-
+
 /Users/supersu/projects/finances/src/Registry.h
 iostream
 -
 string
 -
-
-/Users/supersu/projects/finances/src/Statistics.cpp
-Statistics.h
-/Users/supersu/projects/finances/src/Statistics.h
 
 /Users/supersu/projects/finances/src/Statistics.h
 CreditCard.h
@@ -37,4 +43,14 @@ list
 -
 cctype
 -
+FileFormatter.h
+/Users/supersu/projects/finances/src/FileFormatter.h
+
+/Users/supersu/projects/finances/src/main.cpp
+CreditCard.h
+/Users/supersu/projects/finances/src/CreditCard.h
+FileFormatter.h
+/Users/supersu/projects/finances/src/FileFormatter.h
+Statistics.h
+/Users/supersu/projects/finances/src/Statistics.h
 

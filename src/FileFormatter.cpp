@@ -46,7 +46,7 @@ string removePoint(string number_with_point) {
     return first_digit + second_digit;
 }
 
-void FileFormatter::formatFiles(string path, bool is_revolut, char delimiter) {
+void FileFormatter::formatFiles(string path, bool is_revolut, char *delimiter) {
     ifstream file(path);
     string line, field;
     vector<string> fields;
@@ -62,11 +62,11 @@ void FileFormatter::formatFiles(string path, bool is_revolut, char delimiter) {
     if (file.is_open()) {
         while (getline(file, line)) {
             stringstream ss(line);
-            while (getline(ss, field, delimiter))
+            while (getline(ss, field, *delimiter))
                 fields.push_back(field);
             if (is_revolut) {
-                output_file << fields[0] << delimiter
-                            << fields[1] << delimiter;
+                output_file << fields[0] << *delimiter
+                            << fields[1] << *delimiter;
                 if (!isIncome(*incomes_categories, fields[1])) {
                     if (fields[2].empty()) {
                         fields[3] = changeToPoint(fields[3]);
@@ -84,8 +84,8 @@ void FileFormatter::formatFiles(string path, bool is_revolut, char delimiter) {
             } else {
                 fields[3] = removePoint(fields[3]);
                 fields[3] = fields[3] + "." + fields[4];
-                output_file << fields[0] << delimiter
-                            << fields[2] << delimiter
+                output_file << fields[0] << *delimiter
+                            << fields[2] << *delimiter
                             << fields[3] << endl;
             }
             fields.clear();
@@ -94,4 +94,10 @@ void FileFormatter::formatFiles(string path, bool is_revolut, char delimiter) {
         output_file.close();
         delete incomes_categories;
     }
+}
+
+char *FileFormatter::stringToChar(string str) {
+    char *c_str = new char[str.size() + 1];
+    strcpy(c_str, str.c_str());
+    return c_str;
 }

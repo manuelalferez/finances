@@ -14,7 +14,7 @@
 
 class CreditCard {
 public:
-    CreditCard(string path, char delimiter);
+    CreditCard(string path, char *delimiter);
     virtual ~CreditCard();
 
     float getIncome() const ;

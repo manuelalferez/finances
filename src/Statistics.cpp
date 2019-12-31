@@ -59,8 +59,8 @@ void Statistics::insertCategories(vector<string> &categories) {
         _all_categories->insert(pair<string, float>(categories[i], 0));
 }
 
-void Statistics::getGeneralStatistics(CreditCard *card) {
-    ofstream output_file("../statistics/general_statistics.txt");
+void Statistics::getGeneralStatistics(CreditCard *card, string name_file) {
+    ofstream output_file("../statistics/general_statistics_" + name_file + ".txt");
     float income = card->getIncome();
     float expenses = card->getExpenses();
     output_file << "Income: " << income << "€" << endl;
@@ -85,12 +85,6 @@ void Statistics::toLowerCase(char *str) {
         str[i] = tolower(str[i]);
 }
 
-char *Statistics::stringToChar(string str) {
-    char *c_str = new char[str.size() + 1];
-    strcpy(c_str, str.c_str());
-    return c_str;
-}
-
 void Statistics::showCategorization() {
     for (int i = 0; i < _categorization->size(); ++i) {
         cout << _categorization->at(i).first << endl;
@@ -107,7 +101,8 @@ void Statistics::showCategorization() {
 
 int Statistics::getPositionCategorization(string str) {
     for (int i = 0; i < _categorization->size(); ++i)
-        if (containString(stringToChar(str), stringToChar(_categorization->at(i).first)))
+        if (containString(FileFormatter::stringToChar(str),
+                          FileFormatter::stringToChar(_categorization->at(i).first)))
             return i;
     return -1;
 }
@@ -132,24 +127,24 @@ void Statistics::calculateCategoriesAmount(CreditCard *card) {
     }
 }
 
-void Statistics::writeHeadToFile(string head, ofstream *file) {
-    *file << endl;
-    *file << "------------------------------" << endl;
-    *file << "     " + head << endl;
-    *file << "------------------------------" << endl;
-    *file << endl;
+void Statistics::writeHeadToFile(string head, ofstream &file) {
+    file << endl;
+    file << "------------------------------" << endl;
+    file << "     " + head << endl;
+    file << "------------------------------" << endl;
+    file << endl;
 }
 
-void Statistics::writeToFile(ofstream *file, vector<pair<string, float> > *categories_with_amounts) {
+void Statistics::writeToFile(ofstream &file, vector<pair<string, float> > *categories_with_amounts) {
     for (int j = 0; j < categories_with_amounts->size(); ++j) {
-        *file << categories_with_amounts->at(j).first << ": "
-              << categories_with_amounts->at(j).second << "€" << endl;
+        file << categories_with_amounts->at(j).first << ": "
+             << categories_with_amounts->at(j).second << "€" << endl;
     }
 }
 
-void Statistics::getExpensesByCategories(CreditCard *card) {
-    ofstream output_file_incomes("../statistics/incomes_by_categories.txt");
-    ofstream output_file_expenses("../statistics/expenses_by_categories.txt");
+void Statistics::getExpensesByCategories(CreditCard *card, string file_name) {
+    ofstream output_file_incomes("../statistics/incomes_by_categories_" + file_name + ".txt");
+    ofstream output_file_expenses("../statistics/expenses_by_categories_" + file_name + ".txt");
 
     calculateCategoriesAmount(card);
 
@@ -174,17 +169,17 @@ void Statistics::getExpensesByCategories(CreditCard *card) {
         it++;
     }
 
-    writeHeadToFile("Incomes", &output_file_incomes);
-    writeToFile(&output_file_incomes, &incomes);
+    writeHeadToFile("Incomes", output_file_incomes);
+    writeToFile(output_file_incomes, &incomes);
 
-    writeHeadToFile("Expenses over 250€", &output_file_expenses);
-    writeToFile(&output_file_expenses, &expenses_over_250);
+    writeHeadToFile("Expenses over 250€", output_file_expenses);
+    writeToFile(output_file_expenses, &expenses_over_250);
 
-    writeHeadToFile("Expenses between 250€-100€", &output_file_expenses);
-    writeToFile(&output_file_expenses, &expenses_under_250);
+    writeHeadToFile("Expenses between 250€-100€", output_file_expenses);
+    writeToFile(output_file_expenses, &expenses_under_250);
 
-    writeHeadToFile("Expenses between 100€-0€", &output_file_expenses);
-    writeToFile(&output_file_expenses, &expenses_under_100);
+    writeHeadToFile("Expenses between 100€-0€", output_file_expenses);
+    writeToFile(output_file_expenses, &expenses_under_100);
 }
 
 Statistics::~Statistics() {}

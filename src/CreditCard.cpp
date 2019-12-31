@@ -1,6 +1,6 @@
 #include "CreditCard.h"
 
-CreditCard::CreditCard(string path, char delimiter) {
+CreditCard::CreditCard(string path, char *delimiter) {
     _movements = new vector<Registry *>();
 
     ifstream file(path);
@@ -10,7 +10,7 @@ CreditCard::CreditCard(string path, char delimiter) {
     if (file.is_open()) {
         while (getline(file, line)) {
             stringstream ss(line);
-            while (getline(ss, field, delimiter))
+            while (getline(ss, field, *delimiter))
                 fields.push_back(field);
             try {
                 float amount = stof(fields[2]);

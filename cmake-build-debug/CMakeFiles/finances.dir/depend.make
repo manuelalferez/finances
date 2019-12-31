@@ -12,6 +12,7 @@ CMakeFiles/finances.dir/src/Registry.cpp.o: ../src/Registry.cpp
 CMakeFiles/finances.dir/src/Registry.cpp.o: ../src/Registry.h
 
 CMakeFiles/finances.dir/src/Statistics.cpp.o: ../src/CreditCard.h
+CMakeFiles/finances.dir/src/Statistics.cpp.o: ../src/FileFormatter.h
 CMakeFiles/finances.dir/src/Statistics.cpp.o: ../src/Registry.h
 CMakeFiles/finances.dir/src/Statistics.cpp.o: ../src/Statistics.cpp
 CMakeFiles/finances.dir/src/Statistics.cpp.o: ../src/Statistics.h

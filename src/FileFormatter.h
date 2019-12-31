@@ -14,10 +14,11 @@
 using namespace std;
 
 namespace FileFormatter {
-    string getNameFile(string path);
     bool isIncome(vector<string> &incomes_categories, string notion);
     vector<string> *readCategories(string path);
-    void formatFiles(string path, bool is_revolut, char delimiter);
+    void formatFiles(string path, bool is_revolut, char *delimiter);
+    string getNameFile(string path);
+    char *stringToChar(string str);
 };
 
 
