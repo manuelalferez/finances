@@ -29,6 +29,9 @@ public:
     char *stringToChar(string str);
     void showCategorization();
     int getPositionCategorization(string str);
+    void calculateCategoriesAmount(CreditCard *card);
+    void writeHeadToFile(string head, ofstream *file);
+    void writeToFile(ofstream *file, vector<pair<string, float> > *categories_with_amounts);
 
 private:
     vector<pair<string, list<string>>> *_categorization;
