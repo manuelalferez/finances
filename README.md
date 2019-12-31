@@ -13,20 +13,14 @@ _Los bancos nos ofrecen los movimientos de nuestras tarjetas y con esta aplicaci
 Los movimientos realizados con nuestras tarjeta no se nos suministran categorizados o, en el caso de que así sea, la categorización no es personalizada para el uso que queremos. Las categorías las debemos asignar nosotros.
 
 En la carpeta
-```categories``` veremos un archivo llamado ```categories.csv``` con la siguiente estructura:
+```categories``` veremos un archivo con las instrucciones y estructura para el archivo de categorias. 
 
-```East Yorkshire Motor Services; transporte; transporte_publico```
-
-Donde: 
-
-* ```East Yorkshire Motor Services```  es el concepto del movimiento
-* ```transporte``` y ```transporte_publico``` son categorias para el concepto
-> A cada concepto se le puede dar tantas categorías como necesitemos. 
-
-Dado que esta parte es tediosa 😩 se sugiere la implementación para automatizar el proceso
+Dado que esta parte es tediosa se sugiere la implementación para automatizar ⚙️  el proceso
 - [ ] Automatizar categorización
 
->//TODO terminar
+**3. Parametrización** 
+
+En la carpeta ```params``` veremos un archivo con la configuración de la aplicación y que debemos rellenar antes de ejecutar.
 
 ## Autores ✒️
 
@@ -34,7 +28,5 @@ Dado que esta parte es tediosa 😩 se sugiere la implementación para automatiz
 * **Abdallah Abedraba Abdallah** - [aabedraba](https://github.com/aabedraba)
 
 ## Licencia 📄
-
->//TODO terminar
 
 Este proyecto está bajo la Licencia - mira el archivo [LICENSE.md](LICENSE.md) para detalles 
