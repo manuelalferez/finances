@@ -21,6 +21,9 @@ public:
     float getExpenses() const;
     void showRegistries();
 
+    Registry* getMovement(int pos);
+    int getNumMovements();
+
 private:
     vector<Registry *> *_movements;
 };

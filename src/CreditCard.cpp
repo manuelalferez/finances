@@ -57,3 +57,11 @@ void CreditCard::showRegistries() {
              << _movements->at(i)->getAmount() << endl;
     }
 }
+
+Registry* CreditCard::getMovement(int pos) {
+    return _movements->at(pos);
+}
+
+int CreditCard::getNumMovements() {
+    return _movements->size();
+}

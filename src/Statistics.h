@@ -9,19 +9,30 @@
 #include "CreditCard.h"
 #include <map>
 #include <list>
+#include <cctype>
 
 using namespace std;
 
 class Statistics {
 public:
     Statistics(string path);
-
     virtual ~Statistics();
+
+    void insertCategories(vector<string> &categories);
+    void makeCategorization(vector<string> &categories, vector<string> &items);
+
     void getGeneralStatistics(CreditCard *card);
+    void getExpensesByCategories(CreditCard *card);
+
+    bool containString(char *str, char *substr);
+    void toLowerCase(char *str);
+    char *stringToChar(string str);
+    void showCategorization();
+    int getPositionCategorization(string str);
+
 private:
-
-
-    map<string, list<string>> *_categories;
+    vector<pair<string, list<string>>> *_categorization;
+    map<string, float> *_all_categories;
 };
 
 #endif //FINANCES_STATISTICS_H
