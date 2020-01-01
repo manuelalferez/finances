@@ -2,5 +2,5 @@ name_of_files
 data.csv:revolut.csv
 delimiters_of_files_data
 ,:;
-type_of_file (is revolut file = 1, no is revolut file = 0)
+type_of_file
 0:1
