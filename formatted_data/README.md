@@ -1,3 +1,5 @@
+##The formatted data will appear here
+
 After formatting the data, the files with the records in the following format will be created here:
 ~~~
 Date;Notion;Amount

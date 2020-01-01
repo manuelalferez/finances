@@ -1,4 +1,4 @@
-**Create your categories here**
+##Create your categories here
 
 If your data are from Revolut, create a file called:
 incomes_categories.txt
