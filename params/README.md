@@ -22,3 +22,13 @@ type_of_file
 ~~~
 >Here you choose if the file has a representation like that of Revolut or another. For now there are two implementations: 
 >for Caja Rural (0) and for Revolut (1).
+
+~~~
+file_is_formatted
+0:0:1
+~~~
+Can happen the case that our data file is already in the appropriate format. Like the following:
+~~~
+Date;Notion;Amount
+~~~
+> We specify if it is in the correct format with "1" and if it is not with "0".

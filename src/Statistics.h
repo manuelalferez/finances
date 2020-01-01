@@ -33,7 +33,7 @@ public:
     void calculateCategoriesAmount(CreditCard *card);
     void writeHeadToFile(string head, ofstream &file);
     void writeToFile(ofstream &file, vector<pair<string, float> > *categories_with_amounts);
-
+    void cleanCategoriesAmount();
 private:
     vector<pair<string, list<string>>> *_categorization;
     map<string, float> *_all_categories;

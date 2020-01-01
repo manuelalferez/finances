@@ -142,7 +142,16 @@ void Statistics::writeToFile(ofstream &file, vector<pair<string, float> > *categ
     }
 }
 
+void Statistics::cleanCategoriesAmount() {
+    auto it = _all_categories->begin();
+    while (it != _all_categories->end()) {
+        it->second = 0;
+        it++;
+    }
+}
+
 void Statistics::getExpensesByCategories(CreditCard *card, string file_name) {
+    cleanCategoriesAmount();
     ofstream output_file_incomes("../statistics/incomes_by_categories_" + file_name + ".txt");
     ofstream output_file_expenses("../statistics/expenses_by_categories_" + file_name + ".txt");
 

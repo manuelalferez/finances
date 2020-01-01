@@ -1,6 +1,8 @@
 name_of_files
-data.csv:revolut.csv
+data.csv:revolut.csv:mydata.csv
 delimiters_of_files_data
-,:;
+,:;:;
 type_of_file
-0:1
+0:1:1
+file_is_formatted
+0:0:1
