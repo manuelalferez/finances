@@ -1,5 +1,10 @@
 # Finances
-_Los bancos nos ofrecen los movimientos de nuestras tarjetas y con esta aplicación obtenemos unas estadísticas_
+_Todo el mundo realiza movimientos con sus tarjetas bancarias. El problema es que esos datos son de poca utilidad cuando
+están separados. Si queremos extraer conocimientos de esos datos, tal como saber cuanto hemos gastado en kebab el último
+año o si tenemoos un serio problema con las compras online; resulta interesante, por tanto, conocer nuestra actividad 
+económica._
+
+_Esta aplicación viene a revolver esa necesidad._
 
 ### Instalación 🔧
 
