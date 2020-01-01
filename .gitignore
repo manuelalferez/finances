@@ -1,10 +1,10 @@
 .DS_Store
 .idea/
 categories/*
-!categories/.gitkeep
+!categories/README.md
 data/*
-!data/.gitkeep
+!data/README.md
 formatted_data/*
-!formatted_data/.gitkeep
+!formatted_data/README.md
 statistics/*
-!statistics/.gitkeep
+!statistics/README.md
