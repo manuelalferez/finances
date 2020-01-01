@@ -1,4 +1,4 @@
-##The formatted data will appear here
+## The formatted data will appear here
 
 After formatting the data, the files with the records in the following format will be created here:
 ~~~

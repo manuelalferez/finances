@@ -1,4 +1,4 @@
-##Configure the params of the project
+## Configure the params of the project
 
 In the file called ```params.csv``` you'll find this configuration to fill:
 
